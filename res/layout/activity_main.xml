@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    tools:context="com.ackon.privacy.MainActivity" >
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="위치정보사용 동의"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
