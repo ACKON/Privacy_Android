@@ -1,12 +1,12 @@
 package com.ackon.privacy;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.SwitchCompat;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Switch;
 
 import com.olivestory.ackon.AckonDataManager;
 import com.olivestory.ackon.AckonService;
@@ -22,14 +22,14 @@ import com.olivestory.ackon.cms.SetAckonAgree;
  * @author android
  * 
  */
-public class MainActivity extends ActionBarActivity implements OnClickListener {
+public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		SwitchCompat agree = (SwitchCompat) findViewById(R.id.opt);
+		Switch agree = (Switch) findViewById(R.id.opt);
 		agree.setChecked(getSharedPreferences("Privacy", 0).getBoolean("agree", false));
 
 		agree.setOnClickListener(this);
@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		final SwitchCompat opt = (SwitchCompat) v;
+		final Switch opt = (Switch) v;
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		if (opt.isChecked()) {

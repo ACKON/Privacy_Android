@@ -5,7 +5,7 @@
     android:background="#E5E5E5"
     tools:context="com.ackon.privacy.MainActivity" >
 
-    <android.support.v7.widget.SwitchCompat
+    <Switch
         android:id="@+id/opt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
